@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+      <title>Welcome to Zippy...</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png"></a>
+      <div class="nav-links" id="navLinks>
+        <i class="fa fa-times" onclick="HideMenu()"></i>
+         <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">COURSE</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1>One page promising to<br>fill all your needs!</h1>
+      <p>This is Photoshop's version of Lorem lpsum. Proin<br>gravida nibh vel velit auctor aliquet.
+      </p>
+      <a href="" class="hero-btn">LEARN MORE</a> 
+      <a href="" class="hero-btn">LEARN MORE</a>
+  
+  </div>      
+  </section>
+  
+  <!----------------------------Welcome to Zippy------------------------------>
+
+<section class="course">
+  <h1>Welcome to Zippy</h1>
+  <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibh vel velit auctor aliquet. <br> Aenean sollictiudin, lorem quis bibendium auctor.</p>
+
+  <div class="row">
+    <div class="course-col">
+      <h3>LOREM IPSUM</h3>
+      <p>Lorem ipsum, in graphical and textual context,refers to filter text that is placed in a document or visual presentation. Lorem ipsum is derived from the Latin "dolorem ipsum" roughly translated as "pain itself"</p>
+      <p>LEARN MORE</p>    
+    </div>
+
+      <div class="course-col">
+        <h3>DOLOR SIT</h3>
+        <p>The lorem ipsum gets its name from <br> the LAtin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. </p>       
+        <p>LEARN MORE</p>       
+      </div>
+ 
+        <div class="course-col">
+          <h3>CONSECTETUR</h3>
+          <p>A Wonderful serenity has taken possession of my entire soul,like these sweet mornings of spring which I enjoy with my whole heart.</p>
+          <p>LEARN MORE</p>
+        </div>
+
+      </section>
+
+<!---------------------------------Projects------------------------------->
+
+<section class="campus">
+  <h1>PROJECT</h1>
+
+  <div class="row">
+    <div class="campus-col">
+      <img src="images/Proj1.jpg">
+      <div class="layer">
+        <h3>NAME : AI & DATA SCIENCE<br><p>Data Science takes and utilises the data collected through IOT Systems and technology, and transforms that through analysis and visualisation into something that can create value for an organsaction or business.</p></h3>    
+         </div>
+  </div>
+    <div class="campus-col">
+      <img src="images/vp4.jpg">
+      <div class="layer">
+        <h3>NAME : ROBOTICS<br><p>Robotics is an interdiciplinary field that integrates computer science and engineering. Robotics involves design, construction, operation and use the robots.</p></h3>
+        <p>ABC</p>
+    </div>
+  </div>
+    <div class="campus-col">
+      <img src="images/Proj3.png">
+      <div class="layer">
+        <h3>NAME: SMART CITIES<br><p> Cities already generate large amounts of data(from security cameras and environmental sensors) and already contain big infrastructure networks(like those controlling traffic lights). IOT Projects aim to connect these up, and then add further intelligence into the system.</p></h3>
+    </div>
+  </div>
+
+</section>
+
+<!------------------------------- Zippy Team ------------------------------>
+
+<section class="testimonials">
+  <h1>Zippy Team</h1>
+ 
+   <div class="row">
+     <div class="testimonial-col">
+       <img src="images/team1.jpg">
+       <div>
+         <p>Creative Head</p>
+         <h3>SARA JONHSON</h3> 
+         </div> 
+      </div>
+
+      <div class="testimonial-col">
+        <img src="images/team2.jpg">
+        <div>
+          <p>Chief Financial Officer(CFO)</p>
+          <h3>David Berkley</h3> 
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="testimonial-col">
+      <img src="images/team3.jpg">
+      <div>
+        <p>Chief Executive Officer(CEO)</p>
+        <h3>David Berkley</h3>
+      </div>
+    </div>
+
+</section>
+
+<!-------------------------Search Bar ------------------------------------>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>FullScreen Search Box | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="close-btn">
+         <span class="fas fa-times"></span>
+      </div>
+      <div class="wrapper">
+         <div class="search-btn">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="search-data">
+            <input type="text" required>
+            <div class="line"></div>
+            <label>Type to search..</label>
+            <span class="fas fa-search"></span>
+         </div>
+      </div>
+      <script>
+         $(".search-btn").click(function(){
+           $(".wrapper").addClass("active");
+           $(this).css("display", "none");
+           $(".search-data").fadeIn(500);
+           $(".close-btn").fadeIn(500);
+           $(".search-data .line").addClass("active");
+           setTimeout(function(){
+             $("input").focus();
+             $(".search-data label").fadeIn(500);
+             $(".search-data span").fadeIn(500);
+           }, 800);
+         });
+         $(".close-btn").click(function(){
+           $(".wrapper").removeClass("active");
+           $(".search-btn").fadeIn(800);
+           $(".search-data").fadeOut(500);
+           $(".close-btn").fadeOut(500);
+           $(".search-data .line").removeClass("active");
+           $("input").val("");
+           $(".search-data label").fadeOut(500);
+           $(".search-data span").fadeOut(500);
+         });
+      </script>
+   </body>
+</html>
+
+<!---------------------------Video Projects------------------------------->
+
+<section class="campus">
+  <h1>VIDEO PROJECTS</h1>
+
+  <div class="row">
+    <div class="campus-col">
+      <img src="images/vp1.jpg">
+      <div class="layer">
+        <h3>LEARN MORE</h3>    
+         </div>
+  </div>
+    <div class="campus-col">
+      <img src="images/vp2.jpg">
+      <div class="layer">
+        <h3>LEARN MORE</h3>
+    </div>
+  </div>
+    <div class="campus-col">
+      <img src="images/Proj3.png">
+      <div class="layer">
+        <h3>LEARN MORE</h3>
+    </div>
+  </div>
+
+</section>
+
+
+<!-------------------------Contact Page-------------------------->
+
+<html>
+  <head>
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <h2>Contact Us</h2>
+          <input type="text" class="field" placeholder="Your Name">
+          <input type="text" class="field" placeholder="Your Email">
+          <input type="text" class="field" placeholder="Phone">
+          <textarea placeholder="Message" class="field"></textarea>
+          <button class="btn">Send</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
+<!-----------------------------Footer---------------------------->
+
+<section class="footer">
+  <h4>About Us</h4>
+  <p>Zippy is a Portuguese brand specialized in babies and infants, that serves parents and children from birth to preteen. It offers a wide range<br>of clothing and accessories,childcare products, furniture and toyes, at very affordable prices.</p>
+  <div class="icons">
+</section>
+
+<!-------------------------Javascript for Toggle Menu----------------------->
+
+<script>
+  var navLinks = document.getElementsById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+</Script>
+
+<!----------------------------Footer icons------------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style></style>
+</style>
+</head>
+<body>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+</body>
+</html> 
+
+
+
+
